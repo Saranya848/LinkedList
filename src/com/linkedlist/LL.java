@@ -5,8 +5,8 @@ public class LL {
 	/**
 	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
 	 * Appending LL 3.Method for inserting node in LL 4. Method for pop node at
-	 * first in LL 5. Method for pop node at Last in LL 6. Method for print/display
-	 * LL
+	 * first in LL 5. Method for pop node at Last in LL 6. Method for searching node
+	 * in LL 7. Method for print/display LL
 	 */
 	Node head;
 
@@ -87,7 +87,20 @@ public class LL {
 	}
 
 	/**
-	 * 6. Method for print/display LL
+	 * 6. Method for searching node in LL
+	 */
+	public boolean search(Node head, int x) {
+		Node curr = head;
+		while (curr != null) {
+			if (curr.data == x)
+				return true;
+			curr = curr.next;
+		}
+		return false;
+	}
+
+	/**
+	 * 7. Method for print/display LL
 	 */
 	public void printLL() {
 		if (head == null) {

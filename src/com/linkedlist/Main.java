@@ -12,8 +12,8 @@ public class Main {
 		/*
 		 * PROCEDURE 1.Adding values to nodes 2. Inserting data to linkedList 3. pop
 		 * data at first node to linkedList 4. Printing linedList nodes 5. pop data at
-		 * lastnode to linkedList 6. Printing linedList nodes 7. Appending data to
-		 * linkedList
+		 * lastnode to linkedList 6. Searching node in LL 7. Printing linedList nodes 8.
+		 * Appending data to linkedList
 		 */
 		LL list = new LL();
 		/**
@@ -51,13 +51,21 @@ public class Main {
 		 */
 		list.popAtLast(70);
 		System.out.println("After poping Last data:");
+		list.printLL();
+		System.out.println();
 		/**
-		 * 6. Printing linkedList nodes
+		 * 6. Searching node in LL
+		 */
+		list.search(list.head, 30);
+		list.search(list.head, 70);
+		System.out.println("Data after searting:");
+		/**
+		 * 7. Printing linkedList nodes
 		 */
 		list.printLL();
 		System.out.println();
 		/**
-		 * 7. Appending data to linkedList
+		 * 8. Appending data to linkedList
 		 */
 		list.append(56);
 		list.append(30);
