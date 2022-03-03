@@ -3,26 +3,54 @@ package com.linkedlist;
 public class LL {
 
 	/**
-	 * Simple Linked List Implementation 1.created simple linked list 2.Assigning
-	 * value to the nodes display nodes
-	 * 
+	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
+	 * Appending LL 3. Method for print/display LL 4.Adding values to nodes 5.
+	 * Appending data to linkedList 5. Printing linedList after adding nodes
 	 */
-	public static void main(String[] args) {
+	Node head;
 
-		/**
-		 * 1.created simple linked list 2.assigning values to nodes
-		 */
-
-		Node head = new Node(70);
-		Node second = new Node(30);
-		Node third = new Node(56);
-
-		head.next = second;
-		second.next = third;
-		third.next = null;
-		/**
-		 * Displaying nodes
-		 */
-		System.out.println(third.data + " " + second.data + " " + head.data);
+	/**
+	 * 1. method for adding nodes
+	 * 
+	 * @param data
+	 */
+	public void add(int data) {
+		Node newnode = new Node(data);
+		newnode.next = head;
+		head = newnode;
 	}
+
+	/**
+	 * 2.Method for Appending LL
+	 */
+	public void append(int newdata) {
+
+		Node newnode = new Node(newdata);
+		if (head == null) {
+			head = new Node(newdata);
+		}
+
+		newnode.next = null;
+		Node last = head;
+		while (last.next != null)
+			last = last.next;
+		last.next = newnode;
+		return;
+	}
+
+	/**
+	 * 3.Method for print/display LL
+	 */
+	public void printLL() {
+		if (head == null) {
+			System.out.println("LinkedList is empty");
+		} else {
+			Node pointer = head;
+			while (pointer != null) {
+				System.out.print(pointer.data + " ");
+				pointer = pointer.next;
+			}
+		}
+	}
+
 }
