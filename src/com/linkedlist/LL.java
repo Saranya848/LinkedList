@@ -4,7 +4,8 @@ public class LL {
 
 	/**
 	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
-	 * Appending LL 3.Method for inserting node in LL 4.Method for print/display LL
+	 * Appending LL 3.Method for inserting node in LL 4. Method for pop node in LL
+	 * 5. Method for print/display LL
 	 */
 	Node head;
 
@@ -34,7 +35,6 @@ public class LL {
 		while (last.next != null)
 			last = last.next;
 		last.next = newnode;
-		return;
 	}
 
 	/**
@@ -54,7 +54,20 @@ public class LL {
 	}
 
 	/**
-	 * 4.Method for print/display LL
+	 * 4. Method for pop node in LL
+	 */
+	public int popAtFirst() {
+		int popData = 0;
+		if (head == null) {
+			System.out.println("Stack Over Flow");
+		}
+		popData = head.data;
+		head = head.next;
+		return popData;
+	}
+
+	/**
+	 * 5. Method for print/display LL
 	 */
 	public void printLL() {
 		if (head == null) {
