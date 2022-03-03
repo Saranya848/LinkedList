@@ -68,9 +68,9 @@ public class LL {
 	}
 
 	/**
-	 * 5. Method for pop node at last in LL
+	 * 5. Method for pop node in LL
 	 */
-	public void popAtLast(int key) {
+	public void pop(int key) {
 
 		Node temp = head, prev = null;
 		if (temp != null && temp.data == key) {

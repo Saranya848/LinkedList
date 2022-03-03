@@ -39,18 +39,25 @@ public class Main {
 		System.out.println("After insert data:");
 		list.printLL();
 		System.out.println();
-		/**
-		 * 4. pop data at first node to linkedList
-		 */
-		list.popAtFirst();
 
 		/**
-		 * Doing pop at last node
+		 * Doing pop at key node
 		 */
 		/**
-		 * 5. pop data at lastnode to linkedList
+		 * 4. pop data in linkedList
 		 */
-		list.popAtLast(70);
+		list.pop(40);
+		/**
+		 * Printing data after deleting of LL
+		 */
+		System.out.println("After delete data:");
+		list.printLL();
+		System.out.println();
+
+		/**
+		 * 5. pop data at first node to linkedList
+		 */
+		list.popAtFirst();
 
 		/**
 		 * 6. Searching node in LL
