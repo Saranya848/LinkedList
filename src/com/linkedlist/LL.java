@@ -3,26 +3,53 @@ package com.linkedlist;
 public class LL {
 
 	/**
-	 * Simple Linked List Implementation 1.created simple linked list 2.Assigning
-	 * value to the nodes display nodes
-	 * 
+	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
+	 * print/display LL 3.Adding values to nodes 4. Printing linedList after adding
+	 * nodes
 	 */
+	Node head;
+
+	/**
+	 * 1. method for adding nodes
+	 * 
+	 * @param data
+	 */
+	public void add(int data) {
+		Node new_node = new Node(data);
+		new_node.next = head;
+		head = new_node;
+	}
+
+	/**
+	 * 2.Method for print/display LL
+	 */
+	public void printLL() {
+		if (head == null) {
+			System.out.println("LinkedList is empty");
+		} else {
+			Node pointer = head;
+			while (pointer != null) {
+				System.out.print(pointer.data + " ");
+				pointer = pointer.next;
+			}
+		}
+	}
+
 	public static void main(String[] args) {
 
 		/**
-		 * 1.created simple linked list 2.assigning values to nodes
+		 *
+		 * 3.Adding values to nodes
 		 */
-
-		Node head = new Node(70);
-		Node second = new Node(30);
-		Node third = new Node(56);
-
-		head.next = second;
-		second.next = third;
-		third.next = null;
+		LL list = new LL();
+		list.add(70);
+		list.add(30);
+		list.add(56);
 		/**
-		 * Displaying nodes
+		 * 4. Printing linedList after adding nodes
 		 */
-		System.out.println(third.data + " " + second.data + " " + head.data);
+		list.printLL();
+		System.out.println();
 	}
 }
+
