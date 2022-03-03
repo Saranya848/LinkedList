@@ -99,6 +99,33 @@ public class LL {
 		return false;
 	}
 
+	public void sort() {
+
+		Node curr = head, Nindex = null;
+		int temp;
+
+		if (head == null) {
+			return;
+		} else {
+			while (curr != null) {
+
+				Nindex = curr.next;
+
+				while (Nindex != null) {
+
+					// swap the data between them
+					if (curr.data > Nindex.data) {
+						temp = curr.data;
+						curr.data = Nindex.data;
+						Nindex.data = temp;
+					}
+					Nindex = Nindex.next;
+				}
+				curr = curr.next;
+			}
+		}
+	}
+
 	/**
 	 * 7. Method for print/display LL
 	 */

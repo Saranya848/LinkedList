@@ -47,10 +47,15 @@ public class Main {
 		 * 4. pop data in linkedList
 		 */
 		list.pop(40);
+
+		/**
+		 * Sorting data in LL
+		 */
+		list.sort();
 		/**
 		 * Printing data after deleting of LL
 		 */
-		System.out.println("After delete data:");
+		System.out.println("After data:");
 		list.printLL();
 		System.out.println();
 
