@@ -4,8 +4,7 @@ public class LL {
 
 	/**
 	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
-	 * Appending LL 3. Method for print/display LL 4.Adding values to nodes 5.
-	 * Appending data to linkedList 5. Printing linedList after adding nodes
+	 * Appending LL 3.Method for inserting node in LL 4.Method for print/display LL
 	 */
 	Node head;
 
@@ -39,7 +38,23 @@ public class LL {
 	}
 
 	/**
-	 * 3.Method for print/display LL
+	 * 3.Method for inserting node in LL
+	 */
+	public void insert(Node node, int newdata) {
+
+		if (node == null) {
+			System.out.println("The node can't null");
+			return;
+		}
+
+		Node newnode = new Node(newdata);
+
+		newnode.next = node.next;
+		node.next = newnode;
+	}
+
+	/**
+	 * 4.Method for print/display LL
 	 */
 	public void printLL() {
 		if (head == null) {
