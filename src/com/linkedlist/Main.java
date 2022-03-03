@@ -10,9 +10,10 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		/*
-		 * PROCEDURE 1.Adding values to nodes 2. Inserting data to linkedList 2.
-		 * Printing linedList nodes 3. Appending data to linkedList 4. Printing
-		 * linedList after adding nodes 5. Appending data to linkedList
+		 * PROCEDURE 1.Adding values to nodes 2. Inserting data to linkedList 3. pop
+		 * data at first node to linkedList 4. Printing linedList nodes 5. pop data at
+		 * lastnode to linkedList 6. Printing linedList nodes 7. Appending data to
+		 * linkedList
 		 */
 		LL list = new LL();
 		/**
@@ -29,18 +30,34 @@ public class Main {
 		list.printLL();
 		System.out.println();
 		/**
-		 * 3. pop data to linkedList
+		 * 3. pop data at first node to linkedList
 		 */
 		list.popAtFirst();
-
+		System.out.println("After poping First data:");
 		/**
-		 * 4. Printing linedList after adding nodes
+		 * 4. Printing linkedList nodes
 		 */
-		System.out.println("After changes data:");
 		list.printLL();
 		System.out.println();
 		/**
-		 * 5. Appending data to linkedList
+		 * Doing pop at last node
+		 */
+		list.add(56);
+		System.out.println("Before poping data:");
+		list.printLL();
+		System.out.println();
+		/**
+		 * 5. pop data at lastnode to linkedList
+		 */
+		list.popAtLast(70);
+		System.out.println("After poping Last data:");
+		/**
+		 * 6. Printing linkedList nodes
+		 */
+		list.printLL();
+		System.out.println();
+		/**
+		 * 7. Appending data to linkedList
 		 */
 		list.append(56);
 		list.append(30);

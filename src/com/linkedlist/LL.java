@@ -4,8 +4,9 @@ public class LL {
 
 	/**
 	 * Simple Linked List Implementation 1. method for adding nodes 2.Method for
-	 * Appending LL 3.Method for inserting node in LL 4. Method for pop node in LL
-	 * 5. Method for print/display LL
+	 * Appending LL 3.Method for inserting node in LL 4. Method for pop node at
+	 * first in LL 5. Method for pop node at Last in LL 6. Method for print/display
+	 * LL
 	 */
 	Node head;
 
@@ -54,7 +55,7 @@ public class LL {
 	}
 
 	/**
-	 * 4. Method for pop node in LL
+	 * 4. Method for pop node at first in LL
 	 */
 	public int popAtFirst() {
 		int popData = 0;
@@ -67,7 +68,26 @@ public class LL {
 	}
 
 	/**
-	 * 5. Method for print/display LL
+	 * 5. Method for pop node at last in LL
+	 */
+	public void popAtLast(int key) {
+
+		Node temp = head, prev = null;
+		if (temp != null && temp.data == key) {
+			head = temp.next;
+			return;
+		}
+		while (temp != null && temp.data != key) {
+			prev = temp;
+			temp = temp.next;
+		}
+		if (temp == null)
+			return;
+		prev.next = temp.next;
+	}
+
+	/**
+	 * 6. Method for print/display LL
 	 */
 	public void printLL() {
 		if (head == null) {
